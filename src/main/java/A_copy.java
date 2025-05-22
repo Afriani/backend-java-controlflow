@@ -1,51 +1,47 @@
-public class A_IfStatements {
+import java.util.Scanner;
+
+public class A_copy {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        //
-        // IF Statements 1
-        //
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
 
-        int number = 2;
-        // implementeer de conditie van het if statement.
         if (number % 2 != 0) {
             System.out.println("Odd");
         } else {
             System.out.println("Even");
         }
 
-
-        //
-        // IF Statements 2
-        //
+        scanner.close();
 
         float totalAmount = 100.5f;
         float discount = 0f;
-
         // voeg een if statement toe voor het kortingsysteem.
         // als de klant voor meer dan 50 besteld, wordt er 5% korting gegeven.
         // als de klant voor meer dan 100 besteld, wordt er 10% korting gegeven.
         // anders krijgt de klant 1% korting
         // maak je geen zorgen over afronding.
+
         if (totalAmount >= 100) {
             discount = 0.1f; //korting krijgen
         } else if (totalAmount >= 50) {
-            discount = 0.05f;
+            discount = 0.05f; //korting krijgen
         } else {
-            discount = 0.01f;
+            discount = 0.01f; //korting krijgen
         }
 
         float totalAmountIncludingVAT = (totalAmount - (totalAmount * discount)) * 1.22f;
         System.out.println("Te betalen: " + totalAmountIncludingVAT);
 
-
         //
         // IF Statements 3
         //
-        int x = 10;
+        int x = 8;
         int y = 10;
-        // Voeg een if statement toe zodat alleen het juiste statement hieronder wordt uitgevoerd. Het if statement moet controleren of x groter is dan y, of y groter is dan x.
 
+        // Voeg een if statement toe zodat alleen het juiste statement hieronder wordt uitgevoerd. Het if statement moet controleren of x groter is dan y, of y groter is dan x.
         if (x > y) {
             System.out.println(x + " > " + y);
         } else if (x < y) {
@@ -53,6 +49,7 @@ public class A_IfStatements {
         } else {
             System.out.println("I can't choose... I think they are equal...");
         }
-
     }
 }
+
+
